@@ -1,4 +1,4 @@
-package observer;
+package observer.demo1;
 
 /**
  * @author admin
@@ -10,6 +10,8 @@ public class Test {
         Weather weather = new Weather();
         WeatherDisplay1 d1 = new WeatherDisplay1(weather);
         WeatherDisplay2 d2 = new WeatherDisplay2(weather);
+        weather.removeObserver(d1);
+        weather.removeObserver(d2);
         weather.setTemperature(27);
         weather.setTemperature(26);
     }
